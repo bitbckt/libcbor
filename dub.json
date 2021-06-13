@@ -1,0 +1,27 @@
+{
+    "name": "libcbor",
+    "description": "D bindings to libcbor",
+    "authors": [
+        "Brandon Mitchell"
+    ],
+    "license": "MIT",
+    "subPackages": [
+        "examples/hello",
+        "examples/create_items",
+        "examples/readfile",
+        "examples/sort",
+        "examples/streaming_array",
+        "examples/streaming_parser"
+    ],
+    "targetType": "library",
+    "sourcePaths": [
+        "deimos"
+    ],
+    "importPaths": [
+        "."
+    ],
+    "systemDependencies": "linux: libcbor-0.6.0",
+    "libs": [
+        "cbor"
+    ]
+}

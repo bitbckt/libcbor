@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/libcbor
+libcbor.so
+libcbor.dylib
+libcbor.dll
+liblibcbor.a
+libcbor.lib
+libcbor-test-*
+*.exe
+*.o
+*.obj
+*.lst

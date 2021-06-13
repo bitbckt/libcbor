@@ -1,0 +1,8 @@
+{
+  "name": "streaming_parser",
+  "dependencies": {
+    "libcbor": {
+      "path": "../../"
+    }
+  }
+}

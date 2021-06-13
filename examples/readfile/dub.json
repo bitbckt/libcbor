@@ -1,0 +1,8 @@
+{
+  "name": "readfile",
+  "dependencies": {
+    "libcbor": {
+      "path": "../../"
+    }
+  }
+}

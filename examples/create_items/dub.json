@@ -1,0 +1,8 @@
+{
+  "name": "create_items",
+  "dependencies": {
+    "libcbor": {
+      "path": "../../"
+    }
+  }
+}
