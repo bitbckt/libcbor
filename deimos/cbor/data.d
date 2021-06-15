@@ -11,7 +11,8 @@ alias cbor_data = const ubyte*;
 alias cbor_mutable_data = ubyte*;
 
 /** Specifies the Major type of ::cbor_item_t */
-enum cbor_type
+alias cbor_type = int;
+enum : cbor_type
 {
     CBOR_TYPE_UINT = 0, /** 0 - positive integers */
 
@@ -32,7 +33,8 @@ enum cbor_type
 }
 
 /** Possible decoding errors */
-enum cbor_error_code
+alias cbor_error_code = int;
+enum : cbor_error_code
 {
     CBOR_ERR_NONE = 0,
     CBOR_ERR_NOTENOUGHDATA = 1,
@@ -45,7 +47,8 @@ enum cbor_error_code
 }
 
 /** Possible widths of #CBOR_TYPE_UINT items */
-enum cbor_int_width
+alias cbor_int_width = int;
+enum : cbor_int_width
 {
     CBOR_INT_8 = 0,
     CBOR_INT_16 = 1,
@@ -54,7 +57,8 @@ enum cbor_int_width
 }
 
 /** Possible widths of #CBOR_TYPE_FLOAT_CTRL items */
-enum cbor_float_width
+alias cbor_float_width = int;
+enum : cbor_float_width
 {
     CBOR_FLOAT_0 = 0, /** Internal use - ctrl and special values */
 
@@ -66,14 +70,16 @@ enum cbor_float_width
 }
 
 /** Metadata for dynamically sized types */
-enum _cbor_dst_metadata
+alias _cbor_dst_metadata = int;
+enum : _cbor_dst_metadata
 {
     _CBOR_METADATA_DEFINITE = 0,
     _CBOR_METADATA_INDEFINITE = 1
 }
 
 /** Semantic mapping for CTRL simple values */
-enum _cbor_ctrl
+alias _cbor_ctrl = int;
+enum : _cbor_ctrl
 {
     CBOR_CTRL_NONE = 0,
     CBOR_CTRL_FALSE = 20,
@@ -216,7 +222,8 @@ struct cbor_load_result
 }
 
 /** Streaming decoder result - status */
-enum cbor_decoder_status
+alias cbor_decoder_status = int;
+enum : cbor_decoder_status
 {
     CBOR_DECODER_FINISHED = 0, /** OK, finished */
 

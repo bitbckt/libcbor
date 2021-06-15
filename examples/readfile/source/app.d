@@ -35,35 +35,35 @@ void main(string[] args) {
     cbor_load_result result;
     cbor_item_t* item = cbor_load(buffer, length, &result);
 
-    if (result.error.code != cbor_error_code.CBOR_ERR_NONE) {
+    if (result.error.code != CBOR_ERR_NONE) {
         printf(
                "There was an error while reading the input near byte %zu (read %zu
         bytes in total): ",
                result.error.position, result.read);
         final switch (result.error.code) {
-        case cbor_error_code.CBOR_ERR_MALFORMATED:
+        case CBOR_ERR_MALFORMATED:
             printf("Malformed data\n");
             break;
 
-        case cbor_error_code.CBOR_ERR_MEMERROR:
+        case CBOR_ERR_MEMERROR:
             printf("Memory error -- perhaps the input is too large?\n");
             break;
 
-        case cbor_error_code.CBOR_ERR_NODATA:
+        case CBOR_ERR_NODATA:
             printf("The input is empty\n");
             break;
 
-        case cbor_error_code.CBOR_ERR_NOTENOUGHDATA:
+        case CBOR_ERR_NOTENOUGHDATA:
             printf("Data seem to be missing -- is the input complete?\n");
             break;
 
-        case cbor_error_code.CBOR_ERR_SYNTAXERROR:
+        case CBOR_ERR_SYNTAXERROR:
             printf(
                    "Syntactically malformed data -- see
             http://tools.ietf.org/html/rfc7049\n");
             break;
 
-        case cbor_error_code.CBOR_ERR_NONE:
+        case CBOR_ERR_NONE:
             break;
 
         }
